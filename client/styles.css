@@ -1,0 +1,108 @@
+/* general styles */
+
+body {
+  background-color: #1a1a1a;
+  font-family: 'Nunito', sans-serif;
+  color: #f2f2f2;
+}
+.page-content {
+  text-align: center;
+}
+
+.motivational-text {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.content-container {
+  display: block;
+}
+
+.content {
+  width: 90%;
+  height: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.login-button #Layer_1 {
+  width: 200px;
+}
+
+/* song info, track image */
+
+.songinfo {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+.image-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.track-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* back and next buttons */
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a;
+  border-radius: 25px;
+  padding-top: 9px;
+  position: relative;
+  top: 35%;
+}
+
+.btn-circle:hover {
+  background-color: #1a1a1a;
+  border-width: 2px;
+  padding-top: 7px;
+}
+
+.btn-circle:hover .glyphicon-triangle-left {
+  right: 6px;
+}
+
+.btn-circle:hover .glyphicon-triangle-right {
+  left: 0px;
+}
+
+.btn-circle:active {
+  background-color: #1a1a1a;
+}
+
+.btn-circle:active .glyphicon-triangle-left {
+  background-color: #1a1a1a;
+}
+
+.btn-left {
+  float: left;
+}
+
+.btn-right {
+  float: right;
+}
+
+.glyphicon-triangle-left, .glyphicon-triangle-right {
+  font-size: 200%;
+  color: #f2f2f2;
+}
+
+.glyphicon-triangle-left {
+  right: 5px;
+}
+
+.glyphicon-triangle-right {
+  left: 1px;
+}
