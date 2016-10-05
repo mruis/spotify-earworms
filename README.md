@@ -1,6 +1,6 @@
 # Display your Spotify top tracks - "Earworms"
 
-A coolio-toy to display one's Spotify top tracks, which I found having been my
+A little toy to display one's Spotify top tracks, which I found having been my
 recent earworms. Implemented in React, using
 [kauffecup's spotify-react-router-auth][ksr] as the basis, modified heavily
 frontend-wise.
@@ -8,7 +8,7 @@ frontend-wise.
 ## Setup and running
 
 See [Spotify's Getting Started Guide][sgs]. Create your own Spotify application
-and put the client id, secret and callback url in `server/routes.js`.
+and put the client id and secret in `server/routes.js`.
 
 Run in dev mode:
 $ npm run dev

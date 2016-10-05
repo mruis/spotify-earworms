@@ -9,12 +9,13 @@ import Song from './Song';
 import PrevNextButton from './PrevNextButton';
 
 
+
 class SongContainer extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            songNumber: 0, volume: 20
+            songNumber: 0, volume: 15
         };
     }
 
@@ -35,21 +36,10 @@ class SongContainer extends React.Component {
         this.setState({
             songNumber: this.state.songNumber < 50 ? this.state.songNumber+1 : 50
         });
+
     }
 
     handleOnPlaying(position, duration) {
-        /*
-        if (this.state.volume < 20) { //position.position > 3000) {
-            this.setState({
-                volume: this.state.volume+5
-            });
-        }
-        if (this.state.volume <= 20 && this.state.volume > 0 && position.position > 25000) { //position.position > 3000) {
-            this.setState({
-                volume: this.state.volume-5
-            });
-        }
-        */
     }
 
     handleSongFinished() {

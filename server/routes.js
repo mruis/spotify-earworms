@@ -6,8 +6,8 @@ const express = require('express');
 const router = new express.Router();
 
 // configure the express server
-const CLIENT_ID = '';
-const CLIENT_SECRET = '';
+const CLIENT_ID='';
+const CLIENT_SECRET='';
 const REDIRECT_URI = 'http://localhost:3000/callback';
 const STATE_KEY = 'spotify_auth_state';
 // your application requests authorization
