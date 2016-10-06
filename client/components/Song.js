@@ -17,8 +17,10 @@ export default class Song extends React.Component {
                         <img src={this.props.url} key={this.props.url} className="track-image"/>
                     </ReactCSSTransitionGroup>
                 </div>
-                <h3 className="song-title">{this.props.song}</h3>
-                <h4 className="artist-title">{this.props.artist}</h4>
+                <div className="info-container">
+                    <h3 className="song-title">{this.props.song}</h3>
+                    <h4 className="artist-title">{this.props.artist}</h4>
+                </div>
             </div>
         );
     }

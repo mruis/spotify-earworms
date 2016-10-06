@@ -8,14 +8,12 @@ import {
 import Song from './Song';
 import PrevNextButton from './PrevNextButton';
 
-
-
 class SongContainer extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            songNumber: 0, volume: 0
+            songNumber: 0, volume: 15
         };
     }
 
