@@ -8,10 +8,10 @@ const router = new express.Router();
 // configure the express server
 const CLIENT_ID = '';
 const CLIENT_SECRET = '';
-const REDIRECT_URI = 'http://localhost:3000/callback';
+const REDIRECT_URI = 'http://localhost:3000/callback'; // https://spotify-earworms.herokuapp.com/callback
 const STATE_KEY = 'spotify_auth_state';
 // your application requests authorization
-const scopes = ['user-read-private', 'user-read-email'];
+const scopes = ['user-top-read'];
 
 // configure spotify
 const spotifyApi = new Spotify({
