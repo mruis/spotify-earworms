@@ -6,7 +6,7 @@ import {
 const initialState = {
   accessToken: null,
   refreshToken: null,
-  user: {
+  songs: {
     loading: false,
     items: [{
       album: null,
@@ -56,13 +56,13 @@ export default function reduce(state = initialState, action) {
   // set our loading property when the loading begins
   case SPOTIFY_TRACKS_BEGIN:
     return Object.assign({}, state, {
-      user: Object.assign({}, state.user, {loading: true})
+      songs: Object.assign({}, state.songs, {loading: true})
     });
 
   // when we get the data merge it in
   case SPOTIFY_TRACKS_SUCCESS:
     return Object.assign({}, state, {
-      user: Object.assign({}, state.user, action.data, {loading: false})
+      songs: Object.assign({}, state.songs, action.data, {loading: false})
     });
 
   // currently no failure state :(

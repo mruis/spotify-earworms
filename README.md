@@ -1,4 +1,4 @@
-# Display your Spotify top tracks - "Earworms"
+# Display your Spotify top tracks - "earworms"
 
 A little toy to display one's Spotify top tracks, which I found having been my
 recent earworms. Implemented in React, using

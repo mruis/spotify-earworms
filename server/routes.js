@@ -6,8 +6,8 @@ const express = require('express');
 const router = new express.Router();
 
 // configure the express server
-const CLIENT_ID='';
-const CLIENT_SECRET='';
+const CLIENT_ID = '';
+const CLIENT_SECRET = '';
 const REDIRECT_URI = 'http://localhost:3000/callback';
 const STATE_KEY = 'spotify_auth_state';
 // your application requests authorization
@@ -56,11 +56,6 @@ router.get('/callback', (req, res) => {
       // Set the access token on the API object to use it in later calls
       spotifyApi.setAccessToken(access_token);
       spotifyApi.setRefreshToken(refresh_token);
-
-      // use the access token to access the Spotify Web API
-      // spotifyApi.getMyTopTracks().then(({ body }) => {
-      //   console.log(body);
-      // });
 
       // we can also pass the token to the browser to make requests from there
       res.redirect(`/#/user/${access_token}/${refresh_token}`);

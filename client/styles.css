@@ -7,15 +7,12 @@ body {
 }
 .page-content {
   text-align: center;
+  display: block;
 }
 
 .motivational-text {
   padding-top: 100px;
   text-align: center;
-}
-
-.content-container {
-  display: block;
 }
 
 .content {
@@ -100,14 +97,6 @@ body {
 
 .btn-circle:hover .glyphicon-triangle-right {
   left: 0px;
-}
-
-.btn-circle:active {
-  background-color: #1a1a1a;
-}
-
-.btn-circle:active .glyphicon-triangle-left {
-  background-color: #1a1a1a;
 }
 
 .btn-left {

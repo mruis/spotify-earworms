@@ -8,9 +8,9 @@ export default class PrevNextButton extends React.Component {
 
     render() {
         return (
-            <button className={"btn btn-default btn-circle btn-" + this.props.style} onClick={this.props.onClick}>
+            <a className={"btn btn-default btn-circle btn-" + this.props.style} onClick={this.props.onClick}>
                 <span className={"glyphicon glyphicon-triangle-" + this.props.style}></span>
-            </button>
+            </a>
         );
     }
 
