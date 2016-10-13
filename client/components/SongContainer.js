@@ -60,17 +60,17 @@ class SongContainer extends React.Component {
         }
 
         return (
-            <div className="song-container">
+            <div className="content">
+                <h2>Here, have some earworms.</h2>
                 <PrevNextButton style="left" onClick={this.handlePrevClick.bind(this)}/>
-                <div className="content">
-                    <h2 className="motivational-text">Here, have an earworm.</h2>
-                    <Song artist={artists[0].name} song={name} url={imageUrl} />
-                    {soundElement}
-                </div>
+                <Song artist={artists[0].name} song={name} url={imageUrl} />
+                {soundElement}
                 <PrevNextButton style="right" onClick={this.handleNextClick.bind(this)}/>
             </div>
         );
     }
+
+
 }
 
 export default connect(state => state)(SongContainer);
