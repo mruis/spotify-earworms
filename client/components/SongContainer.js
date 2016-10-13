@@ -7,6 +7,7 @@ import {
 }   from '../actions/actions';
 import Song from './Song';
 import PrevNextButton from './PrevNextButton';
+import { MAX_SONGS } from '../actions/actions';
 
 class SongContainer extends React.Component {
 
@@ -32,7 +33,7 @@ class SongContainer extends React.Component {
 
     handleNextClick() {
         this.setState({
-            songNumber: this.state.songNumber < 50 ? this.state.songNumber+1 : 50
+            songNumber: this.state.songNumber < MAX_SONGS-1 ? this.state.songNumber+1 : MAX_SONGS-1
         });
 
     }
@@ -49,16 +50,24 @@ class SongContainer extends React.Component {
         if (loading) {
             return <h2>Loading...</h2>;
         }
+
+        var soundElement = null;
+        if (preview_url != null) {
+            soundElement = <Sound url={preview_url}
+                                  playStatus={Sound.status.PLAYING}
+                                  volume={this.state.volume}
+                                  onFinishedPlaying={this.handleSongFinished.bind(this)} />
+        }
+
         return (
             <div className="song-container">
-                <h2 className="motivational-text">Here, have an earworm.</h2>
+                <PrevNextButton style="left" onClick={this.handlePrevClick.bind(this)}/>
                 <div className="content">
-                    <PrevNextButton style="left" onClick={this.handlePrevClick.bind(this)}/>
+                    <h2 className="motivational-text">Here, have an earworm.</h2>
                     <Song artist={artists[0].name} song={name} url={imageUrl} />
-                    <Sound url={preview_url} playStatus={Sound.status.PLAYING} volume={this.state.volume}
-                           onFinishedPlaying={this.handleSongFinished.bind(this)} />
-                    <PrevNextButton style="right" onClick={this.handleNextClick.bind(this)}/>
+                    {soundElement}
                 </div>
+                <PrevNextButton style="right" onClick={this.handleNextClick.bind(this)}/>
             </div>
         );
     }

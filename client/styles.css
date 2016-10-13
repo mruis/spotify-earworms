@@ -6,21 +6,29 @@ body {
   color: #f2f2f2;
 }
 
-.page-content, .content {
-  min-width: 540px;
+.page-content {
+  min-width: 580px;
   text-align: center;
+  height: 100vh;
 }
 
-.motivational-text {
-  padding-top: 100px;
+.song-container {
+  display: flex;
+  margin: 0 20px 0 20px;
+
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
 }
 
 .content {
   width: 90%;
-  height: 700px;
+  min-width: 440px;
   margin: auto;
   overflow: hidden;
 }
+
+/* login */
 
 .login {
   position: absolute;
@@ -37,7 +45,7 @@ body {
   width: 200px;
 }
 
-/* song info, track image */
+/* song info */
 
 .songinfo {
   display: inline-block;
@@ -63,6 +71,8 @@ body {
 .info-container {
   width: 400px;
 }
+
+/* transitions */
 
 .change-song-enter {
   transform: translateX(500px);
@@ -96,6 +106,7 @@ body {
   padding-top: 9px;
   position: relative;
   top: 35%;
+  margin-top: 200px;
 }
 
 .btn-circle:hover {
@@ -110,16 +121,6 @@ body {
 
 .btn-circle:hover .glyphicon-triangle-right {
   left: 0px;
-}
-
-.btn-left {
-  float: left;
-  margin-left: 10px;
-}
-
-.btn-right {
-  float: right;
-  margin-right: 10px;
 }
 
 .glyphicon-triangle-left, .glyphicon-triangle-right {
