@@ -20,6 +20,7 @@ body {
   top: 25%;
   width: 100%;
   padding: 0 10px 0 10px;
+  text-align: center;
 }
 
 .login-text {
@@ -130,4 +131,8 @@ body {
 
 .glyphicon-triangle-right {
   left: 1px;
+}
+
+.disabled {
+  opacity: 0.5;
 }
