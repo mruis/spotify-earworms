@@ -54,6 +54,12 @@ body {
   left: 0;
 }
 
+.play-stop {
+    position: absolute;
+    top: 31%;
+    left: 31%;
+}
+
 .info-container {
   width: 400px;
 }
@@ -82,7 +88,7 @@ body {
 
 /* back and next buttons */
 
-.btn-circle {
+.btn-prevnext {
   width: 50px;
   height: 50px;
   background-color: #1a1a1a;
@@ -92,18 +98,20 @@ body {
   top: 35%;
 }
 
-.btn-circle:hover {
+.btn-prevnext:hover {
   background-color: #1a1a1a;
   border-width: 2px;
   padding-top: 7px;
 }
 
-.btn-circle:hover .glyphicon-triangle-left {
-  right: 6px;
+.btn-prevnext:hover .glyphicon-triangle-left {
+    right: 6px;
+    top: 2px;
 }
 
-.btn-circle:hover .glyphicon-triangle-right {
-  left: 0;
+.btn-prevnext:hover .glyphicon-triangle-right {
+    left: 0;
+    top: 2px;
 }
 
 .btn-left {
@@ -135,4 +143,33 @@ body {
 
 .disabled {
   opacity: 0.5;
+}
+
+/* play and stop button */
+
+.btn-playstop {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(229, 229, 229, 0.25);
+    border-radius: 75px;
+    border-width: 5px;
+    opacity: 0.85;
+    border-color: #f2f2f2;
+}
+
+.glyphicon-play, .glyphicon-pause {
+    font-size: 700%;
+    top: 10%;
+    left: 5%;
+    color: #f2f2f2;
+}
+
+.btn-playstop:hover {
+    background-color: rgba(229, 229, 229, 0.25);
+    border-color: #f2f2f2;
+    border-width: 6px;
+}
+
+.btn-playstop:hover .glyphicon {
+    top: 9%;
 }

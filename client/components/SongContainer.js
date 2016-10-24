@@ -14,7 +14,7 @@ class SongContainer extends React.Component {
     constructor() {
         super();
         this.state = {
-            songNumber: 0, volume: 15
+            songNumber: 0, volume: 15, playing: false
         };
     }
 
@@ -61,13 +61,19 @@ class SongContainer extends React.Component {
     defineSoundElement(preview_url) {
         if (preview_url != null) {
             return (<Sound url={preview_url}
-                           playStatus={Sound.status.PLAYING}
+                           playStatus={this.state.playing ? Sound.status.PLAYING : Sound.status.PAUSED}
                            volume={this.state.volume}
                            onFinishedPlaying={this.handleSongFinished.bind(this)} />
                     );
         } else {
             return null;
         }
+    }
+
+    handlePlayStopClick() {
+        this.setState({
+            playing: !this.state.playing
+        });
     }
 
     render() {
@@ -87,7 +93,13 @@ class SongContainer extends React.Component {
             <div className="content">
                 <h2>Here, have some earworms.</h2>
                 {prevButton}
-                <Song artist={artists[0].name} song={name} url={imageUrl} />
+                <Song
+                    artist={artists[0].name}
+                    song={name}
+                    url={imageUrl}
+                    style={this.state.playing ? "pause" : "play"}
+                    onPlayStopClick={this.handlePlayStopClick.bind(this)}
+                    />
                 {soundElement}
                 {nextButton}
             </div>
