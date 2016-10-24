@@ -7,6 +7,8 @@ recent earworms. Implemented in React, using
 [kauffecup's spotify-react-router-auth][ksr] as the basis, modified heavily
 frontend-wise.
 
+![Picture of app](example_earworm.png?raw=true)
+
 ## Setup and running
 
 See [Spotify's Getting Started Guide][sgs]. Create your own Spotify application
