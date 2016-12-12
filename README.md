@@ -14,7 +14,7 @@ frontend-wise.
 See [Spotify's Getting Started Guide][sgs]. Create your own Spotify application
 and put the client id and secret in `server/routes.js`.
 
-Run in dev mode:
+Init npm, after which run in dev mode:
 $ npm run dev
 
 [sgs]: https://developer.spotify.com/web-api/tutorial/
